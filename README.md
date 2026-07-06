@@ -39,6 +39,28 @@ work-rules-ai/
 | FastAPI | RAGオーケストレーター | 8000 |
 | Streamlit | チャットUI | 8501 |
 
+## サンプルデータ（モデル就業規則）
+
+本リポジトリの動作確認には、厚生労働省が公開している**モデル就業規則**を使用しています。
+
+> **モデル就業規則について｜厚生労働省**
+> https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/koyou_roudou/roudoukijun/zigyonushi/model/index.html
+
+常時10人以上の従業員を使用する事業主は、労働基準法第89条の規定により就業規則の作成・届出が義務付けられています。厚生労働省では、就業規則作成の参考となる規程例・解説をまとめたモデル就業規則を公開しています。
+
+ダウンロードは以下から行えます。
+
+- [全体版 PDF形式（令和7年12月版）](https://www.mhlw.go.jp/content/001620507.pdf)
+- [全体版 Word形式（令和7年12月版）](https://www.mhlw.go.jp/content/001620506.docx)
+
+```bash
+# PDFをダウンロードして docs/ に配置する場合
+curl -o docs/model_shugyokisoku.pdf \
+  https://www.mhlw.go.jp/content/001620507.pdf
+```
+
+> 自社の就業規則PDFを使用する場合は、`docs/` に配置して `ingest.py` を実行してください。
+
 ## セットアップ
 
 ### 1. Docker Desktopのメモリ設定
