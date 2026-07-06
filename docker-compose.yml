@@ -1,4 +1,3 @@
-version: "3.9"
 services:
   ollama:
     image: ollama/ollama
@@ -10,7 +9,6 @@ services:
       - OLLAMA_NUM_PARALLEL=${OLLAMA_NUM_PARALLEL}
       - OLLAMA_MAX_LOADED_MODELS=${OLLAMA_MAX_LOADED_MODELS}
       - OLLAMA_KEEP_ALIVE=${OLLAMA_KEEP_ALIVE}
-    mem_limit: ${OLLAMA_MEM_LIMIT}
     restart: unless-stopped
 
   chromadb:
